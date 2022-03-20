@@ -1,0 +1,211 @@
+.App {
+  text-align: center;
+  width: auto;
+  height: auto;
+
+}
+.header{
+  width: 100%;
+  height: 80%;
+ 
+}
+
+.footer{
+  width: 100%;
+  height: 20%;
+
+}
+.mainhead{
+  width: 70%;
+  height: 400px;
+  padding: 10px 15% 10px 15%;
+  float: left;
+ 
+}
+.mainheadright{
+  width: 65%;
+  height: 400px;
+  float: left;
+  padding: 1% 1% 1% 1%;
+
+}
+.mainheadleft{
+  width: 30%;
+  height: 400px;
+  float: left;
+  padding: 1% 1% 1% 1%;
+  
+}
+
+.mainhead img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.tiles{
+   display: inline-block;
+   width: 70%;
+   height: auto;
+  padding: 2% 15% 10% 15%;
+  margin: auto;
+  padding-bottom: 500px;
+}
+.style1{
+position: relative;
+   width: 22%;
+   height: auto;
+   padding:1% 1% 2% 2%;
+   float: left;
+
+   /* position: relative;
+   width: 30%;
+   height: auto;
+   padding: 5% 1% 10% 1%;
+   float: left; */
+}
+h3{
+  color: brown;
+}
+
+    .detail1{
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      padding: 2% 15% 2% 15%;
+      margin: auto;
+     /* padding-bottom: 500px; */
+    }
+    .detail2{
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      padding: 2% 2% 2% 2%;
+
+     /* padding-bottom: 500px; */
+    }
+    .detail3{
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      padding: 2% 2% 2% 2%;
+      margin: auto;
+    }
+    .detailleft1{
+      float: left;
+      height: auto;
+    }
+    
+    .detailleft1 .image img{
+      display: inline-block;
+        width: 100%;
+        height: 500px;
+    }
+    .detailright1{
+      float: left;
+      width: 50%;
+      height: auto;
+    }
+
+.detail{
+  display: inline-block;
+  width: 90%;
+  height: auto;
+ padding: 2% 15% 10% 15%;
+ margin: auto;
+ /* padding-bottom: 500px; */
+}
+.detailleft{
+  float: left;
+
+ 
+  height: auto;
+}
+
+.detailleft .image img{
+  display: inline-block;
+    width: 100%;
+    height: 500px;
+}
+.detailright{
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.detailbanner{
+  background-color: coral;
+  height: 50px;
+  width: 80%;
+  padding-left: 5%
+  ;
+  padding-top: 5px;
+  margin-left: 10%;
+  color: aliceblue;
+  font-size: 20px;
+  text-align: left;
+ 
+}
+.detailgia{
+  background-color: rgb(228, 230, 230);
+  height: 50px;
+  width: 80%;
+  padding-left: 5%
+  ;
+  margin-left: 10%;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+.detailmua{
+
+  height: 50px;
+  width: 80%;
+  padding-left: 5%
+  ;
+  margin-left: 10%;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+.detailmua button{
+  background-color: coral;
+color: aliceblue;
+border-radius: 10px;
+height: 50px;
+  
+}
+
+.detailthem{
+
+  height: 50px;
+  width: 100%;
+  padding-left: 5%
+  ;
+  margin-left: 10%;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+.detailthem button{
+  background-color: rgb(226, 222, 221);
+color: coral;
+border-radius: 10px;
+height: 50px;
+
+border-color: coral;
+  
+}
+.detailgia button{
+  background-color: coral;
+color: aliceblue;
+  
+}
+.gia{
+  float: left;
+  padding: 5px 10px 5px 5px;
+  
+}
+.gia1{
+  float: left;
+  padding: 5px 10px 5px 5px;
+  text-decoration: line-through 2px;
+  font-weight: bold;
+  
+}

@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState, Component} from 'react';
 import './Menubar.css';
 import Aboutus from "./Aboutus";
 import{BrowserRouter,Route,Link,Routes
@@ -8,10 +8,25 @@ import Product from "./Product";
 import Pro from "./Pro";
 import Detail from './Detail';
 import Adminmanager from './admin/Adminmanager';
+import axios from 'axios';
 import {list as listbook}from "./listbook"
-function Menubar(){
-    const[postList,setPostList]=useState(listbook);
-    console.log("this",postList.books)
+class Menubar extends Component{
+    state={
+        litstBooks: []
+      }
+    async componentDidMount(){
+    //   axios.get('https://nhom6-backend-nodejs.herokuapp.com/api/get-all-books')
+    //   .then(res=>{
+    // console.log("aaaa",res)
+    let res= await axios.get('https://nhom6-backend-nodejs.herokuapp.com/api/get-all-books');
+    this.setState({
+      litstBooks:res&&res.data&&res.data.books ? res.data.books:[]
+    })
+    console.log("aaaa",res.data.books)
+    }
+
+    // const[postList,setPostList]=useState(listbook);
+    // console.log("this",postList.books)
 //     const[postList,setPostList]=useState();
 
 // useEffect(()=>{
@@ -29,7 +44,8 @@ function Menubar(){
 
 // );
 
-    
+render() {
+    let{litstBooks}=this.state;
     return(
         <BrowserRouter >
         <nav className="menu-bar">  
@@ -74,22 +90,17 @@ function Menubar(){
                 <Link to="/about">ABOUT</Link>
                 </li>
         </ul>
-         
     </nav>
     <Routes>
-    <Route path="/" element={<Home posts={postList.books}/>}></Route>
-    
-    <Route path="/product" element={<Product  posts={postList.books}/>}></Route>
-  
-    
+    <Route path="/" element={<Home posts={litstBooks}/>}></Route>
+    <Route path="/product" element={<Product  posts={litstBooks}/>}></Route>
+    <Route path="/pro" element={<Pro />}></Route>
     <Route path="/about" element={<Aboutus/>}></Route>
     <Route path="/product/chi-tiet/:id/:hinh/:tensach/:mota/:createdAt/:gia" element={<Detail />}></Route>
-    <Route path="/admin" element={<Adminmanager posts={postList}/>}></Route>
-
-   
+    <Route path="/admin" element={<Adminmanager posts={litstBooks}/>}></Route>
     </Routes>
     </BrowserRouter>
     );
-}
+}}
 export default Menubar;
 

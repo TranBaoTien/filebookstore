@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import axios from 'axios'
 import{useNavigate
 }from'react-router-dom';
 import PropTypes from 'prop-types';
@@ -13,6 +13,7 @@ Product.defaultProps={
 };
 export default function Product(props){
   let navigate=useNavigate();
+  
   
   const{posts}=props;
 
